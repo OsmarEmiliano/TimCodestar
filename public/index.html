@@ -3,10 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="%PUBLIC_URL%/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Mi Portafolio</title>
 </head>
 <body>
-    <div id="root"></div>
+    <header>
+        <div class="logo">
+            <img src="images\logo.jpg" alt="Logo" width="52" height="52">
+            <div class="logo-text">TimCodestar</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <!-- Contenido de la sección "Inicio" -->
+        <h2>Inicio</h2>
+        <p>Texto y elementos relacionados con la sección "Inicio".</p>
+    </section>
+
+    <section id="sobre-mi">
+        <!-- Contenido de la sección "Sobre mí" -->
+        <h2>Sobre mí</h2>
+        <p>Información personal y detalles sobre ti.</p>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyectos-carousel">
+            <div>
+                <h3>Proyecto 1</h3>
+                <p>Descripción del Proyecto 1</p>
+                <img src="images\logo.jpg" alt="Proyecto 1">
+            </div>
+            <div>
+                <h3>Proyecto 2</h3>
+                <p>Descripción del Proyecto 2</p>
+                <img src="images\logo.jpg" alt="Proyecto 2">
+            </div>
+            <!-- Agrega más proyectos según sea necesario -->
+        </div>
+    </section>
+    >
+
+    <section id="contacto">
+        <!-- Contenido de la sección "Contacto" -->
+        <h2>Contacto</h2>
+        <p>Formulario de contacto u otra información para contactarte.</p>
+    </section>
+
+    <!-- Otras secciones según sea necesario -->
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.proyectos-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0',
+            variableWidth: true,
+        });
+    });
+</script>
 </html>
