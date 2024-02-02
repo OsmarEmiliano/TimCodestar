@@ -1,0 +1,24 @@
+1) npm init -y (Inicializa un nuevo proyecto de Node.js:)
+2) npm install react-scripts --save-dev  (Instala React Scripts)
+3) npm start
+
+
+git remote set-url origin https://github.com/brayansadi55/TimCodestar.git
+
+1)Agrega los archivos modificados:
+Abre tu terminal y navega hasta el directorio de tu proyecto. Utiliza el siguiente comando para agregar 
+todos los archivos modificados al área de preparación de Git.
+ 
+---- git add . ---
+
+2)Confirma los cambios:
+Después de agregar los archivos, realiza una confirmación
+con un mensaje que describa tus cambios.
+
+---- git commit -m "Index Semilla" ----
+
+3)Sube los cambios al repositorio remoto (GitHub):
+Utiliza el siguiente comando para subir tus cambios al repositorio en GitHub.
+
+--- git push -u origin  main ----
+
