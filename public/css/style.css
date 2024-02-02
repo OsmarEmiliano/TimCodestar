@@ -11,6 +11,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Hace que el encabezado sea fijo en la parte superior de la página */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
 }
 
 .logo {
@@ -28,9 +31,17 @@ header {
 
 .logo .logo-text {
     color: #fff;
-    font-family: 'Times New Roman', serif; /* Cambia a una fuente más elegante */
-    font-size: 4em; /* Utiliza em para el tamaño del texto, así puedes ajustarlo relativamente */
-    margin-left: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 4em;
+    margin-left: 13px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
 nav ul {
@@ -41,7 +52,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 nav a {
@@ -52,8 +63,32 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffd700; /* Color de resaltado al pasar el ratón */
+    color: #ffd700;
 }
+/* Estilo para dispositivos grandes */
+@media screen and (min-width: 769px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 8px;
+    }
+}
+
+/* Estilo para dispositivos pequeños (como celulares) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+}
+
+
 /* Estilo para las secciones */
 section {
     padding: 280px; /* Agrega espacio alrededor del contenido de cada sección */
@@ -103,4 +138,15 @@ section {
 
 .slick-center {
     transform: perspective(1000px) rotateY(0); /* Regresa al estado normal en el centro */
+}
+/* Ajustes para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .proyectos-carousel {
+        max-width: 90%;
+    }
+
+    .proyectos-carousel img {
+        width: 100%;
+        height: auto;
+    }
 }
